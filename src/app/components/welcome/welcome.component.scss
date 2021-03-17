@@ -1,0 +1,30 @@
+// .effect-bubba {
+//     .imgContainer {
+//         height: 200px;
+//         width: 400px;
+//         overflow: hidden!important;
+//         .img-responsive{
+//             // height: auto !important ;
+//             width: 400px;
+//         }
+//     }
+// }
+
+
+@media (min-width: 992px){
+.col-md-offset-3 {
+    margin-left: 0% !important;
+}
+}
+
+.effect-bubba {
+    img {
+        height: 400px;
+    }
+}
+
+
+
+.bookClass{
+    cursor: pointer;
+}

@@ -1,0 +1,355 @@
+<div id="page-top">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        FATA GAHUNDA
+        <!-- <a class="navbar-brand page-scroll" href="#page-top">
+          <img src="assets/images/logo.png"
+            alt="Treviso theme logo">
+            
+        </a> -->
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <!-- <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li> -->
+          <li>
+            <a class="page-scroll" href="#portfolio">Service</a>
+          </li>
+          <!-- <li>
+            <a class="page-scroll" href="#team">Team</a>
+          </li> -->
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>Our Service</h2>
+            <!-- <p>Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all
+              and you will find what you are looking for.</p> -->
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let serv of ourService; let i = index">
+        <div class="row row-0-gutter">
+          <!-- start portfolio item -->
+          <div class="col-md-6 col-0-gutter">
+            <div class="ot-portfolio-item">
+              <figure class="effect-bubba">
+                <!-- <img src="{{serv.row[0].serviceImage}}" alt="img02" class="img-responsive" /> -->
+                <img [src]="'data:image/jpg;base64,'+serv.row[0].serviceImage" height="200" alt="img02"
+                  class="img-responsive" />
+                <figcaption>
+                  <h2>{{serv.row[0].serviceName}}</h2>
+                  <p>Branding, Design</p>
+                  <a href="#" (click)="getService(serv, serv.row[0])" data-toggle="modal" data-target="#Modal-1">View
+                    more</a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- end portfolio item -->
+          <!-- start portfolio item -->
+          <div class="col-md-6 col-0-gutter">
+            <div class="ot-portfolio-item">
+              <figure class="effect-bubba">
+                <!-- <img src="{{serv.row[1].serviceImage}}" alt="img02" class="img-responsive" /> -->
+                <img [src]="'data:image/jpg;base64,'+serv.row[1].serviceImage" height="200" alt="img02"
+                  class="img-responsive" />
+                <figcaption>
+                  <h2>{{serv.row[1].serviceName}}</h2>
+                  <p>Branding, Web Design</p>
+                  <a href="#" (click)="getService(serv, serv.row[1])" data-toggle="modal" data-target="#Modal-1">View
+                    more</a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- end portfolio item -->
+        </div>
+
+      </div>
+
+    </div><!-- container -->
+  </section>
+
+  <!-- <section id="about" class="mz-module">
+    <div class="container light-bg">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>ABOUT</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <div class="mz-about-container">
+            <p>A creative agency based on Candy Land, ready to boost your business with some beautifull templates.
+              Lattes Agency is one of the best in town see more you will be amazed.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="skillbar-item">
+            <div class="skillbar" data-percent="90%">
+              <h3>Web design</h3>
+              <div class="skillbar-bar">
+                <div class="skillbar-percent" style="width: 90%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skillbar-item">
+            <div class="skillbar" data-percent="80%">
+              <h3>Development</h3>
+              <div class="skillbar-bar">
+                <div class="skillbar-percent" style="width: 80%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skillbar-item">
+            <div class="skillbar" data-percent="85%">
+              <h3>Photography</h3>
+              <div class="skillbar-bar">
+                <div class="skillbar-percent" style="width: 85%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skillbar-item">
+            <div class="skillbar" data-percent="70%">
+              <h3>Marketing</h3>
+              <div class="skillbar-bar">
+                <div class="skillbar-percent" style="width: 70%;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-0-gutter">
+        <div class="col-md-3 col-0-gutter mz-about-default text-center">
+          <div class="mz-module-about">
+            <i class="fa fa-briefcase ot-circle"></i>
+            <h3>Web Development</h3>
+          </div>
+        </div>
+    
+        <div class="col-md-3 col-0-gutter mz-about-dark text-center">
+          <div class="mz-module-about">
+            <i class="fa fa-photo ot-circle"></i>
+            <h3>Visualisation</h3>
+          </div>
+        </div>
+      
+        <div class="col-md-3 col-0-gutter mz-about-default text-center">
+          <div class="mz-module-about">
+            <i class="fa fa-camera-retro ot-circle"></i>
+            <h3>Photography</h3>
+          </div>
+        </div>
+       
+        <div class="col-md-3 col-0-gutter mz-about-dark text-center">
+          <div class="mz-module-about">
+            <i class="fa fa-cube ot-circle"></i>
+            <h3>UI/UX Design</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>Our Team</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="team-item">
+            <div class="team-image">
+              <img src="assets/images/demo/author-2.jpg" class="img-responsive" alt="author">
+            </div>
+            <div class="team-text">
+              <h3>TOM BEKERS</h3>
+              <div class="team-position">CEO & Web Design</div>
+              <p>Mida sit una namet, cons uectetur adipiscing adon elit. Aliquam vitae barasa droma.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <div class="team-image">
+              <img src="assets/images/demo/author-6.jpg" class="img-responsive" alt="author">
+            </div>
+            <div class="team-text">
+              <h3>LINA GOSATA</h3>
+              <div class="team-position">Photography</div>
+              <p>Worsa dona namet, cons uectetur dipiscing adon elit. Aliquam vitae fringilla unda mir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <div class="team-image">
+              <img src="assets/images/demo/author-4.jpg" class="img-responsive" alt="author">
+            </div>
+            <div class="team-text">
+              <h3>John BEKERS</h3>
+              <div class="team-position">Marketing</div>
+              <p>Dolor sit don namet, cons uectetur beriscing adon elit. Aliquam vitae fringilla unda.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>If you have some Questions or need Help! Please Contact Us!<br>We provide best service</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <form name="sentMessage" id="contactForm" novalidate="">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Your Name *" id="name" required=""
+                    data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Your Email *" id="email" required=""
+                    data-validation-required-message="Please enter your email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Your Message *" id="message" required=""
+                    data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button type="submit" class="btn">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p id="back-top">
+    <a href="#top"><i class="fa fa-angle-up"></i></a>
+  </p>
+  <footer>
+    <div class="container text-center">
+      <p>Designed by <a href=""><span>Ihoho</span>.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal for portfolio item 1 -->
+  <div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" *ngIf="isServiceDetail && !isBooking">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="Modal-label-1">{{serviceDetail.serviceName}}</h4>
+        </div>
+        <div class="modal-body">
+          <!-- <img src="{{serviceDetail.serviceImage}}" alt="img01" class="img-responsive" /> -->
+          <img [src]="'data:image/jpg;base64,'+serviceDetail.serviceImage" alt="img01" class="img-responsive" />
+          <div class="modal-works"><span class="bookClass" (click)="bookDetail()">Book</span><span class="bookClass"
+              (click)="rateDetail()">Rate</span></div>
+          <!-- <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="logout()">Close</button>
+        </div>
+      </div>
+      <div *ngIf="isBooking && !isLoggedIn">
+        <app-login (backToHome)="closelogin($event)"></app-login>
+      </div>
+
+      <div *ngIf="isBooking && isLoggedIn">
+        <app-client-booking [partnerService]="serviceDetail" (backToDetail)="closeBooking($event)"></app-client-booking>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+</div>
